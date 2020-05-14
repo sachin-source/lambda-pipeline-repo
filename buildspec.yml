@@ -5,8 +5,8 @@ phases:
         nodejs: 10
   build:
     commands:
-      - export BUCKET=pipelinebucketaws
-      - aws cloudformation package --template-file template.yml --s3-bucket pipelinebucketaws --output-template-file outputtemplate.yml
+      - export BUCKET=pipelinebucketawss
+      - aws cloudformation package --template-file template.yml --s3-bucket pipelinebucketawss --output-template-file outputtemplate.yml
 artifacts:
   type: zip
   files:
