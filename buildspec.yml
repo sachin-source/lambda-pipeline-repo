@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+        nodejs: 10
+  build:
+    commands:
+      - export BUCKET=pipelinebucketaws
+      - npm install time
+      - aws cloudformation package --template-file template.yml --s3-bucket pipelinebucketaws --output-template-file outputtemplate.yml
+artifacts:
+  type: zip
+  files:
+    - template.yml
+    - outputtemplate.yml
