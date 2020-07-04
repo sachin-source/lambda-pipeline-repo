@@ -6,8 +6,8 @@ phases:
   build:
     commands:
       - npm install --save request
-      - export BUCKET=pipelinebucketawss
-      - aws cloudformation package --template-file template.yml --s3-bucket pipelinebucketawss --output-template-file outputtemplate.yml
+      - export BUCKET=blynk-zoom
+      - aws cloudformation package --template-file template.yml --s3-bucket blynk-zoom --output-template-file outputtemplate.yml
 artifacts:
   type: zip
   files:
